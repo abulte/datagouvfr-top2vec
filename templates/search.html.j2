@@ -5,6 +5,7 @@
 <form hx-post="/partials/search" hx-target="#search-results">
   <input name="query" type="text">
   <button type="submit">Search</button>
+  <div class="htmx-indicator">Chargement des résultats...</div>
 </form>
 <div id="search-results"></div>
 {% endblock content %}
