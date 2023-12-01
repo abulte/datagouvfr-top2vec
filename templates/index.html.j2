@@ -1,0 +1,15 @@
+{% extends "layout.html.j2" %}
+
+{% block content %}
+<p>
+  <strong>datagouvfr-top2vec</strong>: <a href="https://www.data.gouv.fr/fr/datasets/catalogue-des-donnees-de-data-gouv-fr/">data.gouv.fr's datasets
+    catalog</a> crunched by <a href="https://github.com/ddangelov/Top2Vec">Top2Vec algorithm</a> for topic modeling and
+  semantic search, using <code>distiluse-base-multilingual-cased</code> pretrained model.
+</p>
+<h2>Top topics by size</h2>
+{% for topic_num in topics %}
+<div hx-get="/partials/topic_cloud/{{ topic_num }}" hx-trigger="load">
+  Chargement...
+</div>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends "layout.html.j2" %}
+
+{% block content %}
+<h2>Query topics</h2>
+<form hx-post="/partials/search" hx-target="#search-results">
+  <input name="query" type="text">
+  <button type="submit">Search</button>
+</form>
+<div id="search-results"></div>
+{% endblock content %}

@@ -1,0 +1,7 @@
+top2vec[sentence_transformers]
+minicli
+mdit-plain
+markdown-it-py
+progressist
+flask
+httpx

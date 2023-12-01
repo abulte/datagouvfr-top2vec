@@ -1,0 +1,22 @@
+{% extends "layout.html.j2" %}
+
+{% block content %}
+<h2>Topic {{ topic_num }}</h2>
+<div hx-get="/partials/topic_cloud/{{ topic_num }}" hx-trigger="load">
+    Chargement...
+</div>
+<table>
+  <tr>
+    <th>title</th>
+    <th>organization</th>
+    <th>score</th>
+  </tr>
+  {% for document in documents %}
+  <tr hx-get="/partials/datasets/{{ document[0] }}?score={{ document[1] }}" hx-trigger="revealed">
+    <td>{{ document[0] }}</td>
+    <td></td>
+    <td>{{ document[1] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}

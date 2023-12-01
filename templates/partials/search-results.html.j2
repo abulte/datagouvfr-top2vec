@@ -1,0 +1,5 @@
+{% for topic_num in topics %}
+<div hx-get="/partials/topic_cloud/{{ topic_num }}" hx-trigger="load">
+  Chargement...
+</div>
+{% endfor %}
