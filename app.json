@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dokku": {
+      "predeploy": "curl -L 'https://huggingface.co/abulte/top2vec-datagouvfr/resolve/main/top2vec_distiluse-base-multilingual-cased.bin?download=true' -o top2vec_distiluse-base-multilingual-cased.bin"
+    }
+  }
+}
