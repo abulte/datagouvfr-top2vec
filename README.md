@@ -12,6 +12,8 @@ make data
 python cli.py train-model
 ```
 
+Or [use trained model](https://huggingface.co/abulte/top2vec-datagouvfr/blob/main/top2vec_distiluse-base-multilingual-cased.bin).
+
 Launch app:
 
 ```

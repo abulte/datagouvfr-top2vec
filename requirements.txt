@@ -5,3 +5,4 @@ markdown-it-py
 progressist
 flask
 httpx
+gunicorn
