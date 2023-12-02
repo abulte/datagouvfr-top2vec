@@ -12,7 +12,7 @@ from scipy.special import softmax
 from wordcloud import WordCloud
 
 
-MODEL_FILE = "top2vec_distiluse-base-multilingual-cased.bin"
+MODEL_FILE = "models/top2vec_distiluse-base-multilingual-cased.bin"
 model = Top2Vec.load(MODEL_FILE)
 
 app = Flask(__name__)

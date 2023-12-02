@@ -1,2 +1,4 @@
 *.csv
 *.bin
+# versionned in huggingface
+models/

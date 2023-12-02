@@ -16,7 +16,8 @@ def train_model(embedding_model="distiluse-base-multilingual-cased"):
         list(corpus), embedding_model=embedding_model, document_ids=list(ids),
         split_documents=True, keep_documents=False, workers=4,
     )
-    model.save(f"top2vec_{embedding_model}.bin")
+    Path("models").mkdir(exist_ok=True)
+    model.save(f"models/top2vec_{embedding_model}.bin")
 
 
 if __name__ == "__main__":
